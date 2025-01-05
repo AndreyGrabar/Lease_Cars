@@ -1,3 +1,4 @@
+// Tab
 const tabItem = document.querySelectorAll(".tabs__btn-item");
 const tabContent = document.querySelectorAll(".tabs__content-item");
 
@@ -24,6 +25,8 @@ function open(evt) {
     .classList.add("tabs__content-item--active");
 }
 
+
+// burgerBtn
 const menuBtn = document.querySelector('.menu__btn');
 const menu = document.querySelector('.menu__list');
 
@@ -33,11 +36,13 @@ menuBtn.addEventListener('click', () => {
 
 const menuButton = document.getElementById("menuButton");
 
-// Додаємо обробник кліка
+
 menuButton.addEventListener("click", () => {
   menuButton.classList.toggle("active");
 });
 
+
+// swiper
 const swiper = new Swiper(".swiper", {
   effect: "fade",
   speed: 500,

@@ -314,6 +314,9 @@ a {
   margin-bottom: 20px;
 }
 
+
+/* contacts page */
+
 .contacts {
   padding: 100px 0 150px;
 }
@@ -454,6 +457,8 @@ border-radius: 10px;
   
 }
 
+/* new-cars page */
+
 .choose {
   padding: 100px 0 150px;
 }
@@ -571,6 +576,9 @@ border-radius: 10px;
 .card__img {
   width: 100%;
 }
+
+
+/* Adaptive */
 
 @media screen and (max-width: 1180px) {
     .important__list {
@@ -748,7 +756,6 @@ border-radius: 10px;
     padding-bottom: 50px;
   }
 }
-
 
 
 @media screen and (max-width: 440px) {
