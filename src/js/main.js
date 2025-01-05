@@ -31,6 +31,13 @@ menuBtn.addEventListener('click', () => {
   menu.classList.toggle('menu__list--active');
 });
 
+const menuButton = document.getElementById("menuButton");
+
+// Додаємо обробник кліка
+menuButton.addEventListener("click", () => {
+  menuButton.classList.toggle("active");
+});
+
 const swiper = new Swiper(".swiper", {
   effect: "fade",
   speed: 500,

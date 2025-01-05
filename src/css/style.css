@@ -549,8 +549,23 @@ border-radius: 10px;
         height: 1.5px;
         background-color: #fff;
         width: 100%;
+        transition: transform 0.3s, opacity 0.3s;
+        
     }
 
+}
+
+
+.menu__btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 5px);
+}
+
+.menu__btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu__btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -5px);
 }
 
 .card__img {
