@@ -41,6 +41,22 @@ a {
 
 .header {
   background-color: #151515;
+  padding-top: 23px;
+  padding-bottom: 30px;
+}
+
+#header2 {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+
+.header-main.fixed {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
 }
 
 .header-main {
@@ -49,14 +65,13 @@ a {
   z-index: 10;
   left: 0;
   right: 0;
+  transition: all 0.3s ease;
 }
 
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding-top: 40px;
-  padding-bottom: 45px;
 }
 
 .menu__list {
@@ -641,6 +656,10 @@ border-radius: 10px;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
+  .card:hover {
+  transform: none;
+  box-shadow: none;
+}
 }
 
 @media screen and (max-width: 650px) {
@@ -759,6 +778,10 @@ border-radius: 10px;
 
 
 @media screen and (max-width: 440px) {
+    .header {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
     .menu__btn {
         display:flex;
     }

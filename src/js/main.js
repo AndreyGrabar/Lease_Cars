@@ -42,6 +42,23 @@ menuButton.addEventListener("click", () => {
 });
 
 
+
+// fixedHeaderMain
+const header = document.querySelector(".header-main");
+const hero = document.querySelector("#slider");
+
+const heroHeight = hero.offsetHeight;
+
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > heroHeight) {
+    header.classList.add("fixed"); 
+  } else {
+    header.classList.remove("fixed");
+  }
+});
+
+
 // swiper
 const swiper = new Swiper(".swiper", {
   effect: "fade",
