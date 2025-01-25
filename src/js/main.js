@@ -26,38 +26,32 @@ function open(evt) {
 }
 
 
-// burgerBtn
-const menuBtn = document.querySelector('.menu__btn');
-const menu = document.querySelector('.menu__list');
-
-menuBtn.addEventListener('click', () => {
-  menu.classList.toggle('menu__list--active');
-});
-
-const menuButton = document.getElementById("menuButton");
-
-
-menuButton.addEventListener("click", () => {
-  menuButton.classList.toggle("active");
-});
-
-
-
-// fixedHeaderMain
+// anim burger menu and fixed header
+const menuBtn = document.querySelector(".menu__btn");
+const menu = document.querySelector(".menu__list");
 const header = document.querySelector(".header-main");
 const hero = document.querySelector("#slider");
 
 const heroHeight = hero.offsetHeight;
 
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > heroHeight) {
-    header.classList.add("fixed"); 
+function updateHeaderState() {
+  if (
+    menu.classList.contains("menu__list--active") ||
+    window.scrollY > heroHeight
+  ) {
+    header.classList.add("fixed");
   } else {
     header.classList.remove("fixed");
   }
+}
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("menu__list--active");
+  menuBtn.classList.toggle("active"); 
+  updateHeaderState(); 
 });
 
+window.addEventListener("scroll", updateHeaderState);
 
 // swiper
 const swiper = new Swiper(".swiper", {
